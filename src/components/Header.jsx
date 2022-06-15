@@ -10,22 +10,22 @@ export const Header = () => {
     <header>
         <div className='header-container'>
             <section className='section-left'>
-                <div className='img-container'>
-                    <img src={vectorLeft} />
-                </div>
+                <button className='img-button'>
+                    <img src={vectorLeft} alt='vector-left' />
+                </button>
                 <div className='title-div'>
                     <p>Kenaz</p>
                 </div>
             </section>
             <section className='section-right'>
                 <ul>
-                    <li>Media</li>
-                    <li>Marketing</li>
-                    <li>Contact</li>
+                    <li><a>Media</a></li>
+                    <li><a>Marketing</a></li>
+                    <li><a>Contact</a></li>
                 </ul>
-                <div className='img-container'>
-                    <img src={searchIcon} />
-                </div>
+                <button className='img-button'>
+                    <img src={searchIcon} alt='search-icon' />
+                </button>
             </section>
         </div>
     </header>

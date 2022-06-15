@@ -1,5 +1,5 @@
-@import '../scss/base/colors';
-@import '../scss/base/typography';
+@import '../../scss/base/colors';
+@import '../../scss/base/typography';
 
 header {
     background-color: $color-header;
@@ -34,7 +34,9 @@ header {
     }
 }
 
-.img-container {
+.img-button {
+    border: none;
+    cursor: pointer;
     mix-blend-mode: normal;
     background-color: lighten($color-header, 5%);
     width: 60px;
@@ -42,6 +44,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 0.3s background-color linear;
+
+    &:hover {
+        background-color: lighten($color-header, 10%);
+    }
+
+    &:active {
+        background-color: lighten($color-header, 30%);
+    }
 
     img {
         width: 14px;
@@ -72,6 +83,18 @@ header {
             font-size: 14px;
             line-height: 27px;
             color: $font-color-primary;
+
+            a {
+                cursor: pointer;
+
+                &:hover {
+                    color: darken($font-color-primary, 30%);
+                }
+
+                &:active {
+                    color: darken($font-color-primary, 50%);
+                }
+            }
         }
     }
 }
