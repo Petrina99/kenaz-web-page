@@ -3,7 +3,7 @@ import React from 'react'
 import vectorLeft from '../assets/vector-left-header.svg';
 import searchIcon from '../assets/search-icon.svg';
 
-import './header.scss';
+import './styles/header.scss';
 
 export const Header = () => {
   return (
