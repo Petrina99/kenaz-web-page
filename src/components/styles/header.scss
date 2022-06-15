@@ -1,14 +1,13 @@
 @import '../../scss/base/colors';
 @import '../../scss/base/typography';
+@import '../../scss/util/mixins';
 
 header {
     background-color: $color-header;
 }
 
 .header-container {
-    width: 940px;
-    margin: 0 auto;
-    height: 53px;
+    @include set-layout(940px, 53px);
     display: flex;
     justify-content: space-between;
 }
@@ -23,12 +22,7 @@ header {
         margin-left: 9px;
 
         p {
-            font-family: $font-header;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 24px;
-            line-height: 27px;
-            color: $font-color-primary;
+            @include set-font($font-secondary, normal, 24px, $font-color-primary, 27px, 400);
         }
         
     }
@@ -77,12 +71,7 @@ header {
 
         li {
             display: block;
-            font-family: $font-nav;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 14px;
-            line-height: 27px;
-            color: $font-color-primary;
+            @include set-font($font-primary, normal, 14px, $font-color-primary, 27px, 400);
 
             a {
                 cursor: pointer;

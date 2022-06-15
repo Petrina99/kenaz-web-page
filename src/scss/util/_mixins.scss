@@ -1,0 +1,19 @@
+@mixin set-font($font-family, $font-style, $font-size, $color, $line-height, $weight) {
+    font-family: $font-family;
+    font-style: $font-style;
+    font-size: $font-size;
+    color: $color;
+    line-height: $line-height;
+    font-weight: $weight;
+}
+
+@mixin set-layout($width, $height) {
+    width: $width;
+    height: $height;
+    margin: 0 auto;
+}
+
+@mixin set-list-item($border-width, $color, $padding-t, $padding-b, $padding-rl) {
+    border-bottom: solid $border-width $color;
+    padding: $padding-t $padding-rl $padding-b;
+}

@@ -1,0 +1,61 @@
+@import '../../scss/base/colors';
+@import '../../scss/base/typography';
+@import '../../scss/util/mixins';
+
+.categories-section {
+    background-color: $color-secondary;
+}
+
+.categories-container {
+    @include set-layout(940px, 53px);
+
+    ul {
+        display: flex;
+        height: 100%;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        list-style-type: none;
+
+        li {
+            cursor: pointer;
+            display: block;
+            text-align: center;
+            transition: 0.2s border-bottom linear;
+
+            a {
+                @include set-font($font-secondary, normal, 18px, $font-color-primary, 22px, 700);
+            }
+        }
+    }
+}
+
+.active-list {
+    padding: 15px 20px 16px;
+    background-color: $color-list-active;
+}
+
+.news-list {
+    @include set-list-item(6px, $color-news, 12px, 13px, 20px)
+}
+
+.business-list {
+    @include set-list-item(6px, $color-business, 12px, 13px, 20px);
+}
+
+
+.sport-list {
+    @include set-list-item(6px, $color-sport, 12px, 13px, 20px);
+}
+
+.life-list {
+    @include set-list-item(6px, $color-life, 12px, 13px, 20px);
+}
+
+.tech-list {
+    @include set-list-item(6px, $color-tech, 12px, 13px, 20px);
+}
+
+.travel-list {
+    @include set-list-item(6px, $color-travel, 12px, 13px, 20px);
+}
