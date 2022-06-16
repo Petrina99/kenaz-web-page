@@ -1,9 +1,12 @@
-$color-background: #FFFFFF;
+// main colors
+$color-background: darken(#FFFFFF, 10%);
 $color-header: #252525;
 $color-secondary: #4D4382;
 
+// font colors
 $font-color-primary: #FFFFFF;
 
+// article colors
 $color-news: #3677B5;
 $color-business: #EE6151;
 $color-sport: #84C14F;
@@ -11,3 +14,8 @@ $color-life: #5DCFF3;
 $color-tech: #FCC44D;
 $color-travel: #A99765;
 $color-list-active: #299EC3;
+
+//banner colors
+$color-banner-border: #D7D7D7;
+$color-banner-bg: #FFFFFF;
+$font-color-banner: #999999;
