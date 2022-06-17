@@ -2,9 +2,8 @@ import Slider from 'react-slick';
 
 import './imageSlider.scss';
 
-import sliderImageFirst from '../../assets/slider-image.png';
-import sliderImageSecond from '../../assets/slider-image-2.jpg';
-import sliderImageThird from '../../assets/slider-image-3.jpg';
+import commentIcon from '../../assets/comment-icon.svg';
+import { slideArray } from '../../const';
 
 export const ImageSlider = () => {
 
@@ -13,18 +12,16 @@ export const ImageSlider = () => {
     slidesToShow: 1,
     arrows: true,
   }
+  
   return (
     <div className='slider'>
       <Slider {...settings}>
-        <div className='slide'>
-          <img src={sliderImageFirst} />
-        </div>
-        <div className='slide'>
-          <img src={sliderImageSecond} />
-        </div>
-        <div className='slide'>
-          <img src={sliderImageThird} />
-        </div>
+        {slideArray.map((slide) => (
+          <div className='slide' key={slide.tag}>
+            <img src={slide.picture} />
+            <h3>{slide.title}</h3>
+          </div>
+        ))}
       </Slider>
     </div>
   )
