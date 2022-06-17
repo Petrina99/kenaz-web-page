@@ -1,0 +1,84 @@
+.slider {
+    width: 940px;
+    height: 425px;
+    margin: 0 auto;
+    margin-top: 18px;
+
+    div {
+        height: 100%;
+    }
+
+    .slide {
+        background: linear-gradient(0deg, black, 40%, transparent);
+        z-index: 1;
+        
+        img {
+            position: relative;
+            z-index: -1;
+        }
+    }
+}
+
+// took this from react-slick and made tweaks to make it custom
+
+.slick-slider {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 36px;
+    height: 53px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    border: none;
+}
+
+.slick-prev
+{
+    left: 25px;
+    background: url('../../assets/arrow-left.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 10;
+}
+
+.slick-next
+{
+    right: 25px;
+    background: url('../../assets/arrow-right.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+

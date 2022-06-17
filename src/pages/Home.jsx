@@ -1,4 +1,9 @@
-import { Header, CategoriesBar, Banner } from "../components"
+import { 
+  Header,
+  CategoriesBar,
+  Banner,
+  ImageSlider
+} from "../components"
 
 export const Home = () => {
   return (
@@ -6,6 +11,7 @@ export const Home = () => {
       <Header />
       <CategoriesBar />
       <Banner bannerWidth={940} bannerHeight={120} />
+      <ImageSlider />
     </>
   )
 }
