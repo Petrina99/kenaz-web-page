@@ -1,0 +1,15 @@
+@import '../../scss/base/colors';
+@import '../../scss/base/typography';
+@import '../../scss/util/mixins';
+
+.individual-category {
+    background-color: $color-bg-article;
+    width: 610px;
+    height: 325px;
+    border-left: 13px solid $color-news;
+
+    &:last-child {
+        position: absolute;
+        top: 342px;
+    }
+}

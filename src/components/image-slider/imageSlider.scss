@@ -3,9 +3,7 @@
 @import '../../scss/util/mixins';
 
 .slider {
-    width: 940px;
-    height: 425px;
-    margin: 0 auto;
+    @include set-layout(940px, 425px);
     margin-top: 18px;
 
     div {
