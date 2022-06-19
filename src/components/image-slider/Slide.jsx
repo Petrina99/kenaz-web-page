@@ -4,7 +4,7 @@ import './styles/slide.scss';
 
 export const Slide = ({ slide }) => {
     return (
-        <div className='slide' key={slide.tag}>
+        <div className='slide'>
             <div className='img-div'>
                 <img src={slide.picture} />
             </div>

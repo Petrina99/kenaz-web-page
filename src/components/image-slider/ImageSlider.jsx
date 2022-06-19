@@ -18,7 +18,7 @@ export const ImageSlider = () => {
         <div className='slider'>
         <Slider {...settings}>
             {slideArray.map((slide) => {
-                return <Slide slide={slide} />
+                return <Slide slide={slide} key={slide.tag}/>
             })}
         </Slider>
         </div>

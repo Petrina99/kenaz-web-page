@@ -55,4 +55,9 @@
     @include set-layout(550px, 220px);
     position: relative;
     top: 80px;
+    display: flex;
+}
+
+.big-pics {
+    justify-content: space-between;
 }

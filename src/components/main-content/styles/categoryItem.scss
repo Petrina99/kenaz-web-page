@@ -1,3 +1,21 @@
 @import '../../../scss/base/colors';
 @import '../../../scss/base/typography';
 @import '../../../scss/util/mixins';
+
+.category-item {
+    width: 170px;
+    height: 130px;
+
+    img {
+        width: 170px;
+        height: 130px;
+    }
+
+    p {
+        @include set-font($font-primary, normal, 12px, $font-color-third, 15px, 400);
+    }
+
+    h3 {
+        @include set-font($font-secondary, normal, 14px, $font-color-secondary, 18px, 700);
+    }
+}
