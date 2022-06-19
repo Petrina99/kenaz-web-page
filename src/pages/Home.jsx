@@ -3,7 +3,7 @@ import {
     CategoriesBar,
     Banner,
     ImageSlider,
-    IndividualCategory,
+    CategoryGroup,
     Sidebar
 } from "../components"
 
@@ -18,9 +18,10 @@ export const Home = () => {
         <main>
         <ImageSlider />
             <div className="main-content">
-                <IndividualCategory title='News' />
+                <CategoryGroup title='News' size={3} />
                 <Sidebar />
-                <IndividualCategory title='Sports' />
+                <CategoryGroup title='Sports' size={3} />
+                <Banner bannerWidth={620} bannerHeight={120} />
             </div>
         </main>
         </>

@@ -1,9 +1,10 @@
 import Slider from 'react-slick';
 
-import './imageSlider.scss';
+import './styles/imageSlider.scss';
 
-import commentIcon from '../../assets/comment-icon.svg';
 import { slideArray } from '../../const';
+
+import { Slide } from './Slide';
 
 export const ImageSlider = () => {
 
@@ -16,27 +17,9 @@ export const ImageSlider = () => {
     return (
         <div className='slider'>
         <Slider {...settings}>
-            {slideArray.map((slide) => (
-            <div className='slide' key={slide.tag}>
-                <div className='img-div'>
-                    <img src={slide.picture} />
-                </div>
-                <div className='date-div'>
-                    <p>
-                        {slide.date}
-                    </p>
-                    <p>
-                        <img src={commentIcon} />      {slide.commentsNum} Comments
-                    </p>
-                </div>
-                <div className='title-div'>
-                    <h3>{slide.title}</h3>
-                </div>
-                <button>
-                    Read Article
-                </button>
-            </div>
-            ))}
+            {slideArray.map((slide) => {
+                return <Slide slide={slide} />
+            })}
         </Slider>
         </div>
     )

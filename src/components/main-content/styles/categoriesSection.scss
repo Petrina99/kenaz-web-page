@@ -1,12 +1,11 @@
-@import '../../scss/base/colors';
-@import '../../scss/base/typography';
-@import '../../scss/util/mixins';
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
 
 .category {
     background-color: $color-bg-article;
     width: 610px;
     height: 325px;
-    border-left: 13px solid $color-news;
     position: relative;
 
     .title-link {
@@ -31,11 +30,29 @@
 }
 
 .category-News {
-    border-left: 13px solid $color-news;
+    border-left: 10px solid $color-news;
 }
 
 .category-Sports {
-    border-left: 13px solid $color-sport;
+    border-left: 10px solid $color-sport;
     position: absolute;
     top: 342px;
+}
+
+.category-Business {
+    border-left: 10px solid $color-business;
+}
+
+.category-carousel {
+    border-left: 10px solid $color-tech;
+}
+
+.category-editorials, .category-local-news {
+    border-left: 10px solid $color-travel;
+}
+
+.articles-layout {
+    @include set-layout(550px, 220px);
+    position: relative;
+    top: 80px;
 }

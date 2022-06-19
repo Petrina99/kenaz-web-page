@@ -1,0 +1,38 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.slider {
+    @include set-layout(940px, 425px);
+    margin-top: 18px;
+
+    div {
+        height: 100%;
+    }
+}
+
+// took this from react-slick and made tweaks to make it custom
+
+.slick-slider {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slick-list {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slick-track {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+}
+
+

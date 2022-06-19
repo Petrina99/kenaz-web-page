@@ -1,18 +1,29 @@
 @import '../../scss/base/colors';
+@import '../../scss/util/mixins';
 
 .banner {
-    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     background: $color-banner-bg;
     border: 1px solid $color-banner-border;
-    margin-top: 16px;
+    
 
     p {
         flex-basis: 100%;
         text-align: center;
         color: $font-color-banner;
     }
+}
+
+.banner-big {
+    @include set-layout(940px, 120px);
+    margin-top: 16px;
+}
+
+.banner-small {
+    @include set-layout(620px, 120px);
+    margin-left: 0;
+    margin-top: 20px;
 }

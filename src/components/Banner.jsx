@@ -1,14 +1,15 @@
 import './styles/banner.scss';
 
-export const Banner = ({ bannerWidth, bannerHeight }) => {
+export const Banner = ({ bannerWidth }) => {
+
+    let bannerStyle = bannerWidth == 940 ? 'banner-big' : 'banner-small';
 
     return (
         <div 
-            className='banner' 
-            style={{ width: `${bannerWidth}px`, height: `${bannerHeight}px` }}
+            className={`${bannerStyle} banner`}
         >
             <p>banner</p>
-            <p>{bannerWidth}x{bannerHeight}</p>
+            <p>{bannerWidth}x120</p>
         </div>
     )
 }
