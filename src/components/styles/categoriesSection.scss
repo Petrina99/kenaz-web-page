@@ -2,14 +2,40 @@
 @import '../../scss/base/typography';
 @import '../../scss/util/mixins';
 
-.individual-category {
+.category {
     background-color: $color-bg-article;
     width: 610px;
     height: 325px;
     border-left: 13px solid $color-news;
+    position: relative;
 
-    &:last-child {
+    .title-link {
         position: absolute;
-        top: 342px;
+        width: 550px;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 30px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 29px, 700);
+        }
+
+        a {
+            align-self: flex-end;
+            @include set-font($font-color-primary, normal, 14px, $color-news, 17px, 400);
+            text-decoration: underline;
+            text-decoration-color: rgba(54, 119, 181, 0.3);
+            text-underline-offset: 4px;
+        }
     }
+}
+
+.category-News {
+    border-left: 13px solid $color-news;
+}
+
+.category-Sports {
+    border-left: 13px solid $color-sport;
+    position: absolute;
+    top: 342px;
 }

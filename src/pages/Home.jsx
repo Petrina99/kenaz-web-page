@@ -18,9 +18,9 @@ export const Home = () => {
         <main>
         <ImageSlider />
             <div className="main-content">
-                <IndividualCategory />
+                <IndividualCategory title='News' />
                 <Sidebar />
-                <IndividualCategory />
+                <IndividualCategory title='Sports' />
             </div>
         </main>
         </>
