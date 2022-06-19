@@ -1,10 +1,17 @@
 @import '../../scss/util/mixins';
 
-.main-content {
-    @include set-layout(940px, 670px);
+main {
+    width: 940px;
+    margin: 0 auto;
     margin-top: 19px;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    position: relative;
+}
+
+.main-content {
+    width: 620px;
+    margin-right: 20px;
+}
+
+.side-content {
+    width: 300px;
 }

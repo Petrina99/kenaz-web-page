@@ -1,0 +1,10 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.sidebar {
+    width: 300px;
+    height: 670px;
+    background-color: $color-bg-sidebar;
+    margin-bottom: 20px;
+}

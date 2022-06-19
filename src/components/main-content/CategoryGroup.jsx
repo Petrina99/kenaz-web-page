@@ -1,4 +1,4 @@
-import './styles/categoriesSection.scss';
+import './styles/categoryGroup.scss';
 
 import { slideArray } from '../../const';
 

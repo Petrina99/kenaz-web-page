@@ -15,13 +15,15 @@ export const Home = () => {
         <Header />
         <CategoriesBar />
         <Banner bannerWidth={940} bannerHeight={120} />
-        <main>
         <ImageSlider />
+        <main>
             <div className="main-content">
                 <CategoryGroup title='News' size={3} />
-                <Sidebar />
                 <CategoryGroup title='Sports' size={3} />
                 <Banner bannerWidth={620} bannerHeight={120} />
+            </div>
+            <div className="side-content">
+                <Sidebar />
             </div>
         </main>
         </>
