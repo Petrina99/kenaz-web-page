@@ -41,6 +41,7 @@
 
 .category-Business {
     border-left: 10px solid $color-business;
+    margin-top: 20px;
 }
 
 .category-carousel {
@@ -54,10 +55,14 @@
 .articles-layout {
     @include set-layout(550px, 220px);
     position: relative;
-    top: 80px;
+    top: 90px;
     display: flex;
 }
 
 .big-pics {
     justify-content: space-between;
+}
+
+.small-pics {
+    flex-wrap: wrap;
 }

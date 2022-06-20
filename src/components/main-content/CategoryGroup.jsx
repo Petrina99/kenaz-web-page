@@ -13,17 +13,17 @@ export const CategoryGroup = ({ title, size }) => {
         newArray[i] = tempArray.pop();
     }
 
-    let style = size == 3 ? 'big-pics' : 'small-pics';
+    let sectionStyle = size == 3 ? 'big-pics' : 'small-pics';
 
     return (
         <section className={`category-${title} category`}>
-            <div className='title-link'>
+            <div className={`title-link`}>
                 <h3>{title}</h3>
                 <a>See all</a>
             </div>
-            <div className={`articles-layout ${style}`}>
+            <div className={`articles-layout ${sectionStyle}`}>
                 {newArray.map((item) => {
-                    return <CategoryItem item={item} key={item.tag}/>
+                    return <CategoryItem item={item} key={item.tag} size={size} />
                 })}
             </div>
         </section>

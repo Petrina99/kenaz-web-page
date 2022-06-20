@@ -22,6 +22,8 @@ export const Home = () => {
                 <CategoryGroup title='News' size={3} />
                 <CategoryGroup title='Sports' size={3} />
                 <Banner bannerWidth={620} bannerHeight={120} />
+                <CategoryGroup title='Business' size={4} />
+                <Banner bannerWidth={620} bannerHeight={120} />
             </div>
             <div className="side-content">
                 <Sidebar />
