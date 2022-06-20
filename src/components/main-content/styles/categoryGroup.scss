@@ -6,7 +6,6 @@
     background-color: $color-bg-article;
     width: 610px;
     height: 325px;
-    position: relative;
 
     .title-link {
         position: absolute;
@@ -48,7 +47,7 @@
     border-left: 10px solid $color-tech;
 }
 
-.category-editorials, .category-local-news {
+.category-editorials {
     border-left: 10px solid $color-travel;
 }
 

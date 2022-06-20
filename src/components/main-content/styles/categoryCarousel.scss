@@ -1,3 +1,59 @@
 @import '../../../scss/base/colors';
 @import '../../../scss/base/typography';
 @import '../../../scss/util/mixins';
+
+.carousel-big {
+    background-color: $color-bg-article;
+    width: 610px;
+    height: 325px;
+    position: relative;
+    margin-top: 30px;
+
+    .carousel-title {
+        position: absolute;
+        width: 550px;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 30px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 29px, 700);
+        }
+    }
+
+    .slick-prev, .slick-next {
+        font-size: 0;
+        position: absolute;
+        top: 50%;
+
+        display: block;
+
+        width: 16px;
+        height: 22px;
+        padding: 0;
+
+        cursor: pointer;
+
+        border: none;
+    }
+
+    .slick-prev {
+        top: 20px;
+        right: 60px;
+        background: url('../../../assets/arrow-left-carousel.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    .slick-next {
+        top: 20px;
+        right: 30px;
+        background: url('../../../assets/arrow-right-carousel.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+
+

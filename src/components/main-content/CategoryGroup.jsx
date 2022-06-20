@@ -17,7 +17,7 @@ export const CategoryGroup = ({ title, size }) => {
 
     return (
         <section className={`category-${title} category`}>
-            <div className={`title-link`}>
+            <div className='title-link'>
                 <h3>{title}</h3>
                 <a>See all</a>
             </div>

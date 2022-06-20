@@ -16,11 +16,11 @@ export const ImageSlider = () => {
   
     return (
         <div className='slider'>
-        <Slider {...settings}>
-            {slideArray.map((slide) => {
-                return <Slide slide={slide} key={slide.tag}/>
-            })}
-        </Slider>
+            <Slider {...settings}>
+                {slideArray.map((slide) => {
+                    return <Slide slide={slide} key={slide.tag} />
+                })}
+            </Slider>
         </div>
     )
 }
