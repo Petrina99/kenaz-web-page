@@ -18,7 +18,7 @@ export const SidebarHeader = () => {
     }
 
     return (
-        <div className='sidebar-header-div'>
+        <header className='sidebar-header-div'>
             <p 
                 title='popular' 
                 className={isActive == 'popular' ? 'active-par' : ''}
@@ -40,6 +40,6 @@ export const SidebarHeader = () => {
             >
                 Comments
             </p>
-        </div>
+        </header>
     )
 }

@@ -1,0 +1,61 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.sidebar-item {
+    height: 110px;
+    border-top: 1px solid $color-bg-sidebar-header;
+    border-bottom: 1px solid $color-bg-sidebar-header;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $color-bg-sidebar-header;
+    }
+
+    .sidebar-item-content {
+        width: 240px;
+        height: 70px;
+        display: flex;
+        align-self: center;
+
+        .sidebar-item-text {
+            width: 170px;
+            align-self: center;
+
+            div {
+                width: 140px;
+                display: flex;
+                justify-content: space-between;
+
+                p {
+                    align-self: center;
+                }
+
+                img {
+                    width: 10px;
+                    height: 10px;
+                }
+            }
+
+            p {
+                @include set-font($font-primary, normal, 10px, $font-color-four, 12px, 400);
+            }
+
+            h3 {
+                @include set-font($font-color-secondary, normal, 14px, $font-color-primary, 17px, 700);
+            }
+        }
+    }
+    
+    .sidebar-item-img {
+        height: 70px;
+        width: 70px;
+        align-self: center;
+        border: 1px solid $font-color-primary;
+        background: url('../../../assets/category-image.svg');
+        background-size: cover;
+    }
+}
