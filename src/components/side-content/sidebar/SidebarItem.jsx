@@ -1,6 +1,6 @@
 import './styles/sidebarItem.scss';
 
-import commentIcon from '../../assets/comment-icon.svg';
+import commentIcon from '../../../assets/comment-icon.svg';
 
 export const SidebarItem = ({ item }) => {
     return (

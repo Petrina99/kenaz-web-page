@@ -1,0 +1,37 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.sidebar-social-item {
+    display: flex;
+    width: 300px;
+    margin-bottom: 7px;
+
+    .social-item-message {
+        height: 40px;
+        width: 130px;
+        background-color: $color-bg-social;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+            @include set-font($font-secondary, normal, 18px, $font-color-secondary, 18px, 700);
+            margin-left: 14px;
+        }
+    }
+
+    .social-item-fans {
+        width: 130px;
+        height: 40px;
+        background-color: $color-bg-sidebar;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+        p {
+            @include set-font($font-primary, normal, 14px, $font-color-primary, 17px, 400);
+            margin-left: 10px;
+        }
+    }
+}

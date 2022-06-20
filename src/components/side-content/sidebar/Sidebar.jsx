@@ -1,8 +1,8 @@
 import './styles/sidebar.scss';
 
-import { SidebarHeader, SidebarItem } from './';
+import { SidebarHeader, SidebarItem } from '..';
 
-import { slideArray } from '../../const';
+import { slideArray } from '../../../const';
 
 export const Sidebar = () => {
 

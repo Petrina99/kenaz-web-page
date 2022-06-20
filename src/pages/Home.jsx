@@ -4,7 +4,8 @@ import {
     Banner,
     ImageSlider,
     CategoryGroup,
-    Sidebar
+    Sidebar,
+    SidebarSocial
 } from "../components"
 
 import './styles/home.scss';
@@ -24,6 +25,7 @@ export const Home = () => {
             </div>
             <div className="side-content">
                 <Sidebar />
+                <SidebarSocial />
             </div>
         </main>
         </>

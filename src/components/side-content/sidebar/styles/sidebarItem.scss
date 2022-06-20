@@ -1,6 +1,6 @@
-@import '../../../scss/base/colors';
-@import '../../../scss/base/typography';
-@import '../../../scss/util/mixins';
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
 
 .sidebar-item {
     height: 110px;
@@ -55,7 +55,7 @@
         width: 70px;
         align-self: center;
         border: 1px solid $font-color-primary;
-        background: url('../../../assets/category-image.svg');
+        background: url('../../../../assets/category-image.svg');
         background-size: cover;
     }
 }
