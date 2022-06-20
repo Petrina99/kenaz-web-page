@@ -26,6 +26,12 @@ export const Home = () => {
             <div className="side-content">
                 <Sidebar />
                 <SidebarSocial />
+                <section className="two-banner-section">
+                    <div className="two-banner-div">
+                        <Banner bannerWidth={120} bannerHeight={120} />
+                        <Banner bannerWidth={120} bannerHeight={120} />
+                    </div>
+                </section>
             </div>
         </main>
         </>
