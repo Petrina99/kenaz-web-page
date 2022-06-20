@@ -1,0 +1,33 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.sidebar-header-div {
+    background-color: $color-bg-sidebar-header;
+    display: flex;
+    justify-content: space-between;
+    padding: 18px 32px;
+
+    p {
+        @include set-font($font-primary, normal, 14px, $font-color-primary, 17px, 400);
+        text-decoration: underline;
+        text-decoration-color: #ACB3BA;
+        text-underline-offset: 3px;
+        cursor: pointer;
+
+        &:hover {
+            color: darken($font-color-primary, 20%);
+            text-decoration-color: darken(#ACB3BA, 20%);
+        }
+    }
+
+    .active-par {
+        color: $color-tech;
+        text-decoration-color: $color-tech;
+
+        &:hover {
+            color: darken($color-tech, 20%);
+            text-decoration-color: darken($color-tech, 20%);
+        }
+    }
+}
