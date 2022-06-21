@@ -26,6 +26,12 @@ export const Home = () => {
                 <CategoryGroup title='Business' size={4} />
                 <Banner bannerWidth={620} bannerHeight={120} />
                 <CategoryCarousel title='News Carousel' size={2} />
+                <div className="double-carousel">
+                    <CategoryCarousel title='Editorials' size={1} />
+                    <CategoryCarousel title='Local News' size={1} />
+                </div>
+                <Banner bannerWidth={940} bannerHeight={120} />
+                <ImageSlider />
             </div>
             <div className="side-content">
                 <Sidebar />
