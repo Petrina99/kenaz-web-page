@@ -1,0 +1,76 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.bottom-slider {
+    @include set-layout(940px, 400px);
+    margin-top: 20px;
+    position: relative;
+
+    div {
+        height: 100%;
+    }
+
+    .slick-active {
+        overflow: visible;
+    }
+
+    .slick-prev,.slick-next {
+        font-size: 0;
+        position: absolute;
+        top: 190px;
+        display: block;
+
+        width: 36px;
+        height: 53px;
+        padding: 0;
+
+        transform: translate(0, -50%);
+
+        cursor: pointer;
+
+        border: none;
+    }
+
+    .slick-prev {
+        left: 25px;
+        background: url('../../../assets/arrow-left.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    .slick-next {
+        right: 25px;
+        background: url('../../../assets/arrow-right.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    .zoom-in {
+        width: 80px;
+        height: 80px;
+        background: url('../../../assets/zoom-in-icon.svg');
+        position: absolute;
+        top: 170px;
+        transform: translateX(430px);
+        z-index: 10;
+        cursor: pointer;
+    }
+}
+
+.thumbnail-container {
+    width: 900px;
+    height: 120px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 260px;
+    left: 20px;
+
+    .thumbnail-item {
+        cursor: pointer;
+        height: 120px;
+    }
+}

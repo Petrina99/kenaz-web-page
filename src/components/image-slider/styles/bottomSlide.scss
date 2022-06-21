@@ -1,0 +1,14 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.no-zoom {
+    position: relative;
+    width: 940px;
+    height: 400px;
+}
+
+.zoom-picture {
+    position: relative;
+    width: 1500px;
+}

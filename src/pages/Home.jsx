@@ -6,7 +6,8 @@ import {
     CategoryGroup,
     Sidebar,
     SidebarSocial,
-    CategoryCarousel
+    CategoryCarousel,
+    BottomSlider
 } from "../components"
 
 import './styles/home.scss';
@@ -33,7 +34,7 @@ export const Home = () => {
                     <CategoryCarousel title='Local News' size={1} />
                 </div>
                 <Banner bannerWidth={940} bannerHeight={120} />
-                <ImageSlider />
+                <BottomSlider />
             </div>
             <div className="side-content">
                 <Sidebar />
