@@ -39,3 +39,14 @@ main {
     display: flex;
     margin-top: 20px;
 }
+
+.facebook-comments {
+    width: 300px;
+    height: 556px;
+    background-color: $color-banner-bg;
+    margin-top: 20px;
+
+    img {
+        padding: 15px 15px;
+    }
+}
