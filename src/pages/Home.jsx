@@ -4,8 +4,6 @@ import {
     Banner,
     ImageSlider,
     CategoryGroup,
-    Sidebar,
-    SidebarSocial,
     CategoryCarousel,
     BottomSlider,
     Footer,
