@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import Slider from 'react-slick';
 
 import { BottomSlide } from './';
@@ -8,30 +10,105 @@ import './styles/bottomSlider.scss';
 
 export const BottomSlider = () => {
 
-    let tempArray = [...imageArray];
+    let newArray = [...imageArray];
 
-    let newArray = [];
+    newArray.splice(-1);
 
-    for (let i = 0; i < 7; i++) {
-        newArray[i] = tempArray.pop();
+    const [currentSlide, setCurrentSlide] = useState(1);
+
+    const handleSlide = (e) => {
+        const { id } = e.currentTarget.dataset;
+
+        setCurrentSlide(parseInt(id));
+        console.log(currentSlide);
+    }
+
+    const handleNextArrow = () => {
+        if (currentSlide == 7) {
+            setCurrentSlide(1);
+        } else {
+            setCurrentSlide(currentSlide + 1);
+        }
+
+        console.log(currentSlide);
+    }
+
+    const handlePrevArrow = () => {
+        if (currentSlide == 1) {
+            setCurrentSlide(7);
+        } else {
+            setCurrentSlide(currentSlide - 1);
+        }
+
+        console.log(currentSlide);
+    }
+
+    const PrevArrow = (props) => {
+        const { onClick, style } = props;
+
+        const handleClick = () => {
+            onClick();
+            setTimeout(() => {
+                handlePrevArrow();
+            }, 100);
+        }
+
+        return (
+            <button 
+                className='slick-prev'
+                style={{...style}}
+                onClick={handleClick}
+            />
+        )
+    }
+
+    const NextArrow = (props) => {
+
+        const { onClick, style } = props;
+
+        const handleClick = () => {
+            onClick();
+            setTimeout(() => {
+                handleNextArrow();
+            }, 100);
+        }
+
+        return (
+            <button 
+                className='slick-next'
+                style={{...style}}
+                onClick={handleClick}
+            />
+        )
     }
 
     const settings = {
         speed: 500,
         slidesToShow: 1,
         arrows: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />
     }
 
     return (
         <div className={`bottom-slider`}>
             <Slider {...settings}>
-                {imageArray.map((image) => {
-                    return <BottomSlide key={image.id} slide={image} />
-                })}
+                {newArray.map((item) => (
+                    <BottomSlide 
+                        slides={newArray}  
+                        current={currentSlide - 1}
+                        key={item.id} 
+                    />
+                ))}
             </Slider>
             <div className='thumbnail-container'>
                 {newArray.map((image) => (
-                    <div key={image.id} className='thumbnail-item'>
+                    <div 
+                        key={image.id}
+                        data-id={image.id} 
+                        className='thumbnail-item'
+                        onClick={handleSlide}
+                    >
                         <img src={image.picture} />
                     </div>
                 ))}

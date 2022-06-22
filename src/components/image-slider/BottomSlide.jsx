@@ -1,11 +1,11 @@
 import './styles/bottomSlide.scss';
 
-export const BottomSlide = ({ slide }) => {
+export const BottomSlide = ({ slides, current }) => {
 
     return (
         <>
             <div className='zoom-in'></div>
-            <img src={slide.bigPicture} />
+            <img src={slides[current].bigPicture} />
         </>
     )
 }

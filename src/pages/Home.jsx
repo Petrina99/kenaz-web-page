@@ -12,8 +12,6 @@ import {
 
 import './styles/home.scss';
 
-import facebookComments from '../assets/facebook-comments.svg';
-
 export const Home = () => {
     return (
         <>
