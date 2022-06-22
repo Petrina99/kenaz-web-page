@@ -15,8 +15,7 @@ export const BottomSlider = () => {
     for (let i = 0; i < 7; i++) {
         newArray[i] = tempArray.pop();
     }
-    
-    console.log(newArray);
+
     const settings = {
         speed: 500,
         slidesToShow: 1,

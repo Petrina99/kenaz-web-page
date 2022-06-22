@@ -1,0 +1,9 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.footer-container {
+    background-color: $color-bg-footer;
+    border-top: 20px solid $color-bg-sidebar;
+    margin-top: 20px;
+}
