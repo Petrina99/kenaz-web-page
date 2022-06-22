@@ -1,5 +1,4 @@
-export * from './Header';
-export * from './CategoriesBar';
+export * from './header';
 export * from './Banner';
 export * from './image-slider';
 export * from './main-content';

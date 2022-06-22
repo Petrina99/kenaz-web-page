@@ -1,4 +1,4 @@
-import './styles/banner.scss';
+import './banner.scss';
 
 export const Banner = ({ bannerWidth, bannerHeight }) => {
 
