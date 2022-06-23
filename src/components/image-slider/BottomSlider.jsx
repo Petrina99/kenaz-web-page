@@ -20,7 +20,6 @@ export const BottomSlider = () => {
         const { id } = e.currentTarget.dataset;
 
         setCurrentSlide(parseInt(id));
-        console.log(currentSlide);
     }
 
     const handleNextArrow = () => {
@@ -29,8 +28,6 @@ export const BottomSlider = () => {
         } else {
             setCurrentSlide(currentSlide + 1);
         }
-
-        console.log(currentSlide);
     }
 
     const handlePrevArrow = () => {
@@ -39,8 +36,6 @@ export const BottomSlider = () => {
         } else {
             setCurrentSlide(currentSlide - 1);
         }
-
-        console.log(currentSlide);
     }
 
     const PrevArrow = (props) => {
@@ -83,7 +78,7 @@ export const BottomSlider = () => {
     }
 
     const settings = {
-        speed: 500,
+        speed: 250,
         slidesToShow: 1,
         arrows: true,
         nextArrow: <NextArrow />,

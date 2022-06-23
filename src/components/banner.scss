@@ -1,4 +1,5 @@
 @import '../scss/base/colors';
+@import '../scss/base/typography';
 @import '../scss/util/mixins';
 
 .banner {
@@ -14,6 +15,7 @@
         flex-basis: 100%;
         text-align: center;
         color: $font-color-banner;
+        @include set-font($font-primary, normal, 14px, $font-color-banner, 17px, 400);
     }
 }
 

@@ -2,8 +2,18 @@
 @import '../../../scss/base/typography';
 @import '../../../scss/util/mixins';
 
-.footer-container {
+.footer-background {
     background-color: $color-bg-footer;
     border-top: 20px solid $color-bg-sidebar;
     margin-top: 20px;
+
+    .footer-container {
+        @include set-layout(940px, 735px);
+        margin-top: 50px;
+
+        section {
+            width: 300px;
+            height: 685px;
+        }
+    }
 }

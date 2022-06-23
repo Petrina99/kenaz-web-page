@@ -10,9 +10,9 @@ export const Header = () => {
     <header>
         <div className='header-container'>
             <section className='section-left'>
-                <button className='img-button'>
+                <div className='img-button'>
                     <img src={vectorLeft} alt='vector-left' />
-                </button>
+                </div>
                 <div className='title-div'>
                     <p>Kenaz</p>
                 </div>

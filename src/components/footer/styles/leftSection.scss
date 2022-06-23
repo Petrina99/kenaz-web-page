@@ -1,0 +1,43 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.left-footer-section {
+
+    .l-section-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .l-section-title {
+
+            margin-left: 20px;
+
+            h3 {
+                @include set-font($font-secondary, normal, 30px, $font-color-title-footer, 30px, 400);
+            }
+        }
+
+        .l-section-para {
+            margin-top: 20px;
+            flex-basis: 100%;
+
+            p {
+                @include set-font($font-secondary, normal, 14px, $font-color-third, 20px, 400);
+            }
+        }
+
+        .l-section-social {
+            width: 100%;
+            margin-top: 20px;
+            height: 38px;
+            display: flex;
+            justify-content: space-between;
+
+            .l-section-social-icon {
+                height: 100%;
+            }
+        }
+    }
+}
