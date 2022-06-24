@@ -20,7 +20,7 @@
 
         a {
             align-self: flex-end;
-            @include set-font($font-color-primary, normal, 14px, $color-news, 17px, 400);
+            @include set-font($font-primary, normal, 14px, $color-news, 17px, 400);
             text-decoration: underline;
             text-decoration-color: rgba(54, 119, 181, 0.3);
             text-underline-offset: 4px;
