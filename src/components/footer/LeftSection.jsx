@@ -4,9 +4,11 @@ import logo from '../../assets/footer-logo.svg';
 
 import { footerSocialArray } from '../../const';
 
+import { FooterArticles } from './';
+
 export const LeftSection = () => {
     return (
-        <section className='left-footer-section'>
+        <section className='left-footer-section footer-section'>
             <header className='l-section-header'>
                 <div>
                     <img src={logo} />
@@ -27,6 +29,10 @@ export const LeftSection = () => {
                     ))}
                 </div>
             </header>
+            <div className='l-section-heading'>
+                <h3>Featured</h3>
+            </div>
+            <FooterArticles />
         </section>
     )
 }

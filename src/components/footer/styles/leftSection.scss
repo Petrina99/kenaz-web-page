@@ -27,17 +27,26 @@
                 @include set-font($font-secondary, normal, 14px, $font-color-third, 20px, 400);
             }
         }
+    }
+}
 
-        .l-section-social {
-            width: 100%;
-            margin-top: 20px;
-            height: 38px;
-            display: flex;
-            justify-content: space-between;
+.l-section-social {
+    width: 100%;
+    margin-top: 20px;
+    height: 38px;
+    display: flex;
+    justify-content: space-between;
 
-            .l-section-social-icon {
-                height: 100%;
-            }
-        }
+    .l-section-social-icon {
+        height: 100%;
+    }
+}
+
+.l-section-heading {
+    width: 100%;
+    margin-top: 84px;
+    
+    h3 {
+        @include set-font($font-secondary, normal, 24px, $font-color-primary, 29px, 700);
     }
 }
