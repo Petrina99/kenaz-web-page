@@ -10,11 +10,13 @@ export const LeftSection = () => {
     return (
         <section className='left-footer-section footer-section'>
             <header className='l-section-header'>
-                <div>
-                    <img src={logo} />
-                </div>
-                <div className='l-section-title'>
-                    <h3>Kenaz</h3>
+                <div className='l-section-header-div'>
+                    <div>
+                        <img src={logo} />
+                    </div>
+                    <div className='l-section-header-title'>
+                        <h3>Kenaz</h3>
+                    </div>
                 </div>
                 <div className='l-section-para'>
                     <p>

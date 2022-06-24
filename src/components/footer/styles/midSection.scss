@@ -1,0 +1,66 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.mid-footer-section {
+    
+    .m-section-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .m-section-title {
+            height: 50px;
+            flex-basis: 100%;
+            display: flex;
+            align-items: center;
+
+            h3 {
+                @include set-font($font-secondary, normal, 24px, $font-color-newsletter, 30px, 700);
+            }
+        }
+
+        .m-section-para {
+            margin-top: 20px;
+            flex-basis: 100%;
+
+            p {
+                @include set-font($font-secondary, normal, 14px, $font-color-third, 20px, 400);
+            }
+        }
+
+        .m-section-email {
+            flex-basis: 100%;
+            display: flex;
+            margin-top: 20px;
+
+            input {
+                height: 50px;
+                width: 60%;
+                border: none;
+                background-color: $color-bg-email-input;
+                padding-left: 21px;
+                @include set-font($font-primary, normal, 16px, $font-color-input, 19px, 400);
+            }
+
+            button {
+                width: 40%;
+                border-radius: 0;
+                border: none;
+                background-color: $color-secondary;
+                @include set-font($font-primary, normal, 16px, $font-color-primary, 19px, 400);
+                cursor: pointer;
+            }
+        }
+    }
+
+    .m-section-heading {
+        width: 100%;
+        margin-top: 70px;
+    
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-primary, 29px, 700);
+        }
+    }
+}

@@ -10,6 +10,8 @@
     .footer-container {
         @include set-layout(940px, 735px);
         margin-top: 50px;
+        display: flex;
+        justify-content: space-between;
 
         .footer-section {
             width: 300px;

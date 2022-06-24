@@ -20,9 +20,10 @@
         height: 70px;
         display: flex;
         align-self: center;
+        justify-content: space-between;
 
         .sidebar-item-text {
-            width: 170px;
+            width: 165px;
             align-self: center;
 
             div {
@@ -45,7 +46,7 @@
             }
 
             h3 {
-                @include set-font($font-color-secondary, normal, 14px, $font-color-primary, 17px, 700);
+                @include set-font($font-secondary, normal, 14px, $font-color-primary, 17px, 700);
             }
         }
     }
