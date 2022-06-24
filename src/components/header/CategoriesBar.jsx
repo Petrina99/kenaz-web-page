@@ -9,12 +9,7 @@ export const CategoriesBar = () => {
     const toggleActive = (e) => {
         const { title } = e.currentTarget;
 
-        if (isActive == title) {
-            setActive(title);
-        } 
-        else {
-            setActive(title);
-        }
+        setActive(title);
     }
 
     return (

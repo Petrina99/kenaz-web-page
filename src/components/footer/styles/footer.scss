@@ -8,7 +8,7 @@
     margin-top: 20px;
 
     .footer-container {
-        @include set-layout(940px, 735px);
+        @include set-layout(940px, 655px);
         margin-top: 50px;
         display: flex;
         justify-content: space-between;
@@ -16,6 +16,23 @@
         .footer-section {
             width: 300px;
             height: 600px;
+        }
+    }
+
+    .footer-bottom {
+        height: 150px;
+        border-top: 1px solid $color-bg-email-input;
+
+        .footer-bottom-container {
+            width: 940px;
+            margin: 0 auto;
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                @include set-font($font-primary, normal, 12px, $font-color-input, 14px, 400);
+            }
         }
     }
 }

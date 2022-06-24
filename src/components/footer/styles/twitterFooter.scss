@@ -1,0 +1,94 @@
+@import '../../../scss/base/colors';
+@import '../../../scss/base/typography';
+@import '../../../scss/util/mixins';
+
+.twitter-footer-section {
+
+    .t-section-header {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .t-section-title {
+            height: 50px;
+            flex-basis: 100%;
+            display: flex;
+            align-items: center;
+
+            h3 {
+                @include set-font($font-secondary, normal, 24px, $font-color-newsletter, 30px, 700);
+            }
+        }
+
+        .t-section-tags {
+            width: 300px;
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+
+            .tag-item {
+                background-color: $color-bg-email-input;
+                text-align: center;
+                margin-right: 5px;
+                margin-bottom: 5px;
+                cursor: pointer;
+
+                p {
+                    @include set-font($font-primary, normal, 12px, $font-color-third, 20px, 400);
+                    padding: 4px 12px;
+                }
+            }
+
+            .active {
+                background-color: $color-secondary;
+
+                p {
+                    color: $font-color-primary;
+                }
+            }
+        }
+    }
+
+    .t-section-heading {
+        width: 100%;
+        margin-top: 47px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-primary, 29px, 700);
+        }
+    }
+
+    .t-section-twitter-feed {
+        width: 300px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 25px;
+
+        article {
+            flex-basis: 100%;
+            margin-bottom: 20px;
+
+            .twitter-feed-username {
+                display: flex;
+
+                .twitter-feed-icon {
+                    margin-right: 5px;
+                }
+
+                p {
+                    @include set-font($font-primary, normal, 14px, $font-color-third, 16px, 400);
+                }
+            }
+
+            .twitter-feed-text {
+                flex-basis: 100%;
+                margin-top: 10px;
+
+                p {
+                    @include set-font($font-primary, normal, 13px, $font-color-primary, 18px, 400);
+                }
+            }
+        }
+    }
+}
