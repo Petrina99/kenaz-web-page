@@ -2,6 +2,8 @@ import { useState } from 'react';
 
 import './styles/categoriesBar.scss';
 
+import { categoriesBarArray } from '../../const';
+
 export const CategoriesBar = () => {
 
     const [isActive, setActive] = useState('news');
@@ -16,48 +18,15 @@ export const CategoriesBar = () => {
         <section className='categories-section'>
             <div className="categories-container">
                 <ul>
-                    <li 
-                        className={isActive == 'news' ? 'active-list' : 'news-list'}
-                        title='news'
-                        onClick={toggleActive}
-                    >
-                        <a>NEWS</a>
-                    </li>
-                    <li 
-                        className={isActive == 'business' ? 'active-list' : 'business-list'}
-                        title='business' 
-                        onClick={toggleActive}
-                    >
-                        <a>BUSINESS</a>
-                    </li>
-                    <li 
-                        className={isActive == 'sport' ? 'active-list' : 'sport-list'}
-                        title='sport'
-                        onClick={toggleActive}
-                    >
-                        <a>SPORT</a>
-                    </li>
-                    <li 
-                        className={isActive == 'life' ? 'active-list' : 'life-list'}
-                        title='life'
-                        onClick={toggleActive}
-                    >
-                        <a>LIFE</a>
-                    </li>
-                    <li 
-                        className={isActive == 'tech' ? 'active-list' : 'tech-list'}
-                        title='tech'
-                        onClick={toggleActive}
-                    >
-                        <a>TECH</a>
-                    </li>
-                    <li 
-                        className={isActive == 'travel' ? 'active-list' : 'travel-list'}
-                        title='travel'
-                        onClick={toggleActive}
-                    >
-                        <a>TRAVEL</a>
-                    </li>
+                    {categoriesBarArray.map((item) => (
+                        <li 
+                            className={isActive == item.tag ? 'active-list' : `${item.tag}-list`}
+                            title={item.tag}
+                            onClick={toggleActive}
+                        >
+                            <a>{item.title}</a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </section>
