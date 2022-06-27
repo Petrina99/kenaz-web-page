@@ -23,6 +23,7 @@ export const CategoriesBar = () => {
                             className={isActive == item.tag ? 'active-list' : `${item.tag}-list`}
                             title={item.tag}
                             onClick={toggleActive}
+                            key={item.tag}
                         >
                             <a>{item.title}</a>
                         </li>
