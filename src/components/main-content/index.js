@@ -1,3 +1,2 @@
-export * from './CategoryGroup';
-export * from './CategoryItem';
-export * from './CategoryCarousel';
+export * from './home-page';
+export * from './category-page';
