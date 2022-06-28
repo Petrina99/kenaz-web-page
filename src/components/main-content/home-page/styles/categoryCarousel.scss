@@ -1,0 +1,154 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.carousel {
+    background-color: $color-bg-article;
+    position: relative;
+
+    .carousel-title {
+        position: absolute;
+        width: 550px;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 30px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 29px, 700);
+        }
+    }
+
+    p {
+        @include set-font($font-primary, normal, 12px, $font-color-third, 15px, 400);
+    }
+
+    h3 {
+        @include set-font($font-secondary, normal, 14px, $font-color-secondary, 18px, 700);
+    }
+}
+
+.carousel-big {
+    width: 610px;
+    height: 325px;
+    margin-top: 20px;
+
+    div {
+        height: 100%;
+    }
+
+    .slick-prev, .slick-next {
+        font-size: 0;
+        position: absolute;
+
+        display: block;
+
+        width: 16px;
+        height: 22px;
+        padding: 0;
+
+        cursor: pointer;
+
+        border: none;
+    }
+
+    .slick-prev {
+        top: 20px;
+        right: 60px;
+        background: url('../../../../assets/arrow-left-carousel.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    .slick-next {
+        top: 20px;
+        right: 30px;
+        background: url('../../../../assets/arrow-right-carousel.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.carousel-slider-big {
+    position: relative;
+    top: 70px;
+    margin-left: 25px;
+    cursor: pointer;
+
+    .carousel-img {
+        width: 260px;
+        height: 150px;
+        background: url('../../../../assets/category-image.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 9px;
+    }
+
+    .carousel-text {
+        width: 220px;
+        height: 70px;
+    }
+}
+
+.carousel-small {
+    width: 290px;
+    height: 325px;
+    margin-right: 20px;
+    
+    div {
+        height: 100%;
+    }
+
+    .slick-prev, .slick-next {
+        font-size: 0;
+        position: absolute;
+
+        display: block;
+
+        width: 16px;
+        height: 22px;
+        padding: 0;
+
+        cursor: pointer;
+
+        border: none;
+    }
+
+    .slick-prev {
+        top: 20px;
+        right: 60px;
+        background: url('../../../../assets/arrow-left-carousel-small.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+
+    .slick-next {
+        top: 20px;
+        right: 30px;
+        background: url('../../../../assets/arrow-right-carousel-small.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+}
+
+.carousel-slider-small {
+    position: relative;
+    top: 70px;
+    margin-left: 30px;
+    cursor: pointer;
+
+    .carousel-img {
+        width: 230px;
+        height: 150px;
+        background: url('../../../../assets/category-image.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-bottom: 9px;
+    }
+
+    .carousel-text {
+        width: 230px;
+        height: 70px;
+    }
+}

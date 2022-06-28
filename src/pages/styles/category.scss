@@ -1,0 +1,14 @@
+@import '../../scss/base/colors';
+@import '../../scss/util/mixins';
+
+main {
+    width: 940px;
+    margin: 0 auto;
+    margin-top: 19px;
+    display: flex;
+}
+
+.main-content {
+    width: 620px;
+    margin-right: 20px;
+}

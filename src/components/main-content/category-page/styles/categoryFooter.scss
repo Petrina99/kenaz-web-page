@@ -1,0 +1,41 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.category-page-numbering {
+    width: 570px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 5px;
+    margin-bottom: 30px;
+
+    .numbering-container {
+        width: 345px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .number {
+            cursor: pointer;
+            width: 30px;
+            height: 30px;
+            background-color: $border-color-item;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            p {
+                @include set-font($font-primary, normal, 14px, $color-secondary, 17px, 400);
+            }
+        }
+
+        .active-number {
+            background-color: $color-secondary;
+
+            p {
+                @include set-font($font-primary, normal, 14px, $font-color-primary, 17px, 400);
+            }
+        }
+    }
+}

@@ -1,0 +1,47 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.category-item-normal {
+    width: 170px;
+    height: 130px;
+    cursor: pointer;
+
+    img {
+        width: 170px;
+        height: 130px;
+    }
+
+    p {
+        @include set-font($font-primary, normal, 12px, $font-color-third, 15px, 400);
+    }
+
+    h3 {
+        @include set-font($font-secondary, normal, 14px, $font-color-secondary, 18px, 700);
+    }
+}
+
+.category-item-small {
+    width: 260px;
+    height: 90px;
+    display: flex;
+    justify-content: space-between;
+
+    div {
+        width: 145px;
+        align-self: center;
+    }
+
+    img {
+        width: 100px;
+        height: 90px;
+    }
+
+    p {
+        @include set-font($font-primary, normal, 12px, $font-color-third, 15px, 400);
+    }
+
+    h3 {
+        @include set-font($font-secondary, normal, 14px, $font-color-secondary, 18px, 700);
+    }
+}

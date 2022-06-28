@@ -1,0 +1,33 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.category-page-container {
+
+    width: 100%;
+    background-color: $font-color-primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .category-container-heading {
+        
+        width: 570px;
+        margin-top: 15px;
+        margin-left: 5px;
+        margin-bottom: 40px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 29px, 700);
+        }
+    }
+    
+    .category-page-group {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
+

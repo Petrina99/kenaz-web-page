@@ -1,0 +1,92 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.category-page-item-container {
+    width: 100%;
+    border-bottom: 1px solid $border-color-item;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-page-item {
+    height: 405px;
+    width: 570px;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: 5px;
+
+    .category-page-item-heading {
+        width: 500px;
+        margin-bottom: 10px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 28px, 700);
+        }
+    }
+    
+    .category-page-item-date {
+        width: 500px;
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: 16px;
+
+        .item-date-container {
+            width: 360px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            div {
+                display: flex;
+                align-items: center;
+
+                img {
+                    height: 16px;
+                    width: 16px;
+                    margin-right: 4px;
+                }
+            }
+                
+            p {
+                @include set-font($font-primary, normal, 12px, $font-color-third, 15px, 400);
+            }
+        }
+        
+    }
+
+    .category-page-img {
+        width: 170px;
+        height: 130px;
+        margin-right: 20px;
+
+        img {
+            display: block;
+            width: 170px;
+            height: 130px;
+        }
+    }
+
+    .category-page-item-text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 380px;
+
+        p {
+            @include set-font($font-secondary, normal, 14px, $category-page-text-color, 22px, 400);
+        }
+
+        button {
+            cursor: pointer;
+            margin-top: 15px;
+            padding: 8px 20px;
+            background-color: $color-secondary;
+            border: none;
+            @include set-font($font-primary, normal, 14px, $font-color-primary, 17px, 400);
+        }
+    }
+}
