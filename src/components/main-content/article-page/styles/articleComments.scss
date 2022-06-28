@@ -1,0 +1,142 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.article-comments-container {
+    width: 100%;
+    margin-top: 20px;
+    background-color: $font-color-primary;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+
+    .comments-heading {
+        width: 570px;
+        margin-top: 15px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 29px, 700);
+        }
+    }
+
+    .comments-group {
+        width: 570px;
+        margin-top: 45px;
+
+        .comments-group-item {
+            width: 100%;
+            height: 85px;
+            margin-bottom: 45px;
+            display: flex;
+            align-items: flex-start;
+            
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+
+            .comment-item-img {
+                height: 58px;
+                width: 58px;
+                margin-right: 15px;
+                border: 1px solid $border-color-item;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                    background-color: $border-color-item;
+                }
+            }
+
+            .comment-item-info {
+                width: 500px;
+                position: relative;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-end;
+
+                h3 {
+                    @include set-font($font-secondary, normal, 18px, $color-secondary, 20px, 400);
+                }
+    
+                .comment-item-date {
+                    margin-left: 20px;
+                    @include set-font($font-primary, normal, 11px, $font-color-third, 20px, 400);
+                }
+    
+                .comment-item-reply {
+                    cursor: pointer;
+                    position: absolute;
+                    right: 10px;
+                    top: 0;
+                    @include set-font($font-primary, normal, 14px, $color-secondary, 17px, 400);
+                }
+
+                .comment-item-content {
+                    @include set-font($font-primary, normal, 13px, $category-page-text-color, 20px, 400);
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .add-comment-div {
+        width: 570px;
+        margin-top: 35px;
+        display: flex;
+        flex-wrap: wrap;
+
+        h3 {
+            @include set-font($font-secondary, normal, 24px, $font-color-secondary, 29px, 700);
+        }
+
+        p {
+            @include set-font($font-primary, normal, 13px, $category-page-text-color, 20px, 400);
+            margin-top: 27px;
+        }
+
+        input {
+            @include set-font($font-primary, normal, 14px, $font-color-third, 17px, 400);
+            padding-top: 15px;
+            padding-left: 18px;
+            padding-bottom: 15px;
+            background-color: $border-color-item;
+            border: none;
+            margin-bottom: 10px;
+        }
+
+        input[name="name"] {
+            width: 300px;
+            margin-top: 25px;
+        }
+
+        input[name="email"] {
+            width: 300px;
+        }
+
+        textarea {
+            width: 100%;
+            @include set-font($font-primary, normal, 14px, $font-color-third, 17px, 400);
+            padding-top: 15px;
+            padding-left: 18px;
+            padding-bottom: 160px;
+            background-color: $border-color-item;
+            border: none;
+            resize: none;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: $color-secondary;
+            border: none;
+            margin-bottom: 30px;
+            @include set-font($font-primary, normal, 14px, $font-color-primary, 17px, 400);
+            padding: 15px 40px;
+            cursor: pointer;
+        }
+    }
+}

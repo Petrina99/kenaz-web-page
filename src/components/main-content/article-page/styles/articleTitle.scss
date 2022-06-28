@@ -1,0 +1,43 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.article-title-container {
+    @include set-layout(940px, 590px);
+    margin-top: 20px;
+    position: relative;
+
+    .article-title-img {
+
+        background: linear-gradient(0deg, $color-background, 300px, transparent);
+        z-index: 5;
+
+        img {
+            position: relative;
+            height: 590px;
+            width: 940px;
+            z-index: -1;
+        }
+    }
+
+    .article-title-date {
+        position: absolute;
+        left: 50px;
+        top: 420px;
+
+        p {
+            @include set-font($font-primary, normal, 12px, $article-page-title-color, 15px, 400);
+        }
+    }
+
+    .article-title-heading {
+        width: 750px;
+        position: absolute;
+        bottom: 35px;
+        left: 50px;
+
+        h3 {
+            @include set-font($font-secondary, normal, 44px, $article-page-title-color, 53px, 700);
+        }
+    }
+}

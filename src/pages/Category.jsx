@@ -1,14 +1,14 @@
 import {
-  Header,
-  CategoriesBar,
-  Banner,
-  ImageSlider,
-  SideContent,
-  Footer,
-  CategoryContainer
+    Header,
+    CategoriesBar,
+    Banner,
+    ImageSlider,
+    SideContent,
+    Footer,
+    CategoryContainer
 } from '../components';
 
-import './styles/category.scss';
+import './styles/home.scss';
 
 export const Category = () => {
     return (

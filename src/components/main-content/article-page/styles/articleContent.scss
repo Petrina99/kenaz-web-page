@@ -1,0 +1,35 @@
+@import '../../../../scss/base/colors';
+@import '../../../../scss/base/typography';
+@import '../../../../scss/util/mixins';
+
+.article-content-container {
+    background-color: $font-color-primary;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    .article-content-text {
+        margin-top: 40px;
+        width: 570px;
+        
+        p {
+            @include set-font($font-secondary, normal, 14px, $category-page-text-color, 22px, 400);
+        }
+    }
+
+    .article-content-img {
+        width: 100%;
+        margin-top: 40px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .article-content-social {
+        margin-top: 45px;
+        margin-bottom: 20px;
+    }
+}

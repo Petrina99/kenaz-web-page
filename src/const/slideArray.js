@@ -30,14 +30,14 @@ export const slideArray = [
         tag: "Patriots",
         title: "Patriots make cuts ... and Tim Tebow survives (so far)",
         date: "August 27, 2013",
-        picture: fourthImg,
+        picture: fiveImg,
         commentsNum: 25,
     }, 
     {   
         tag: "Palestinians",
         title: "Palestinians call off peace talks after clash",
         date: "August 26, 2013",
-        picture: fiveImg,
+        picture: fourthImg,
         commentsNum: 16,
     }
 ]
