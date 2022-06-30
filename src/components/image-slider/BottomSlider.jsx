@@ -2,9 +2,9 @@ import { useState } from 'react';
 
 import Slider from 'react-slick';
 
-import { BottomSlide } from './';
-
 import { imageArray } from '../../const';
+
+import exitIcon from '../../assets/x-icon.svg';
 
 import './styles/bottomSlider.scss';
 
@@ -15,6 +15,7 @@ export const BottomSlider = () => {
     newArray.splice(-1);
 
     const [currentSlide, setCurrentSlide] = useState(1);
+    const [isZoom, setIsZoom] = useState(false);
 
     const handleSlide = (e) => {
         const { id } = e.currentTarget.dataset;
@@ -77,23 +78,27 @@ export const BottomSlider = () => {
         )
     }
 
-    const settings = {
-        speed: 250,
-        slidesToShow: 1,
-        arrows: true,
-        nextArrow: <NextArrow />,
-        prevArrow: <PrevArrow />
-    }
+    const NormalSlider = () => {
 
-    return (
-        <div className={`bottom-slider`}>
+        const settings = {
+            speed: 250,
+            slidesToShow: 1,
+            arrows: true,
+            nextArrow: <NextArrow />,
+            prevArrow: <PrevArrow />
+        }
+
+        return (
+            <div className={`bottom-slider`}>
             <Slider {...settings}>
                 {newArray.map((item) => (
-                    <BottomSlide 
-                        slides={newArray}  
-                        current={currentSlide - 1}
-                        key={item.id} 
-                    />
+                    <div className='bottom-slide' key={item.id} >
+                        <div 
+                            className='zoom-in'
+                            onClick={() => setIsZoom(true)}
+                        ></div>
+                        <img src={imageArray[currentSlide - 1].bigPicture} />
+                    </div>
                 ))}
             </Slider>
             <div className='thumbnail-container'>
@@ -109,5 +114,32 @@ export const BottomSlider = () => {
                 ))}
             </div>
         </div>
+        )
+    }
+
+    const ZoomedIn = () => {
+        return (
+            <div className='zoomed-in-pic'>
+                <div 
+                    onClick={() => setIsZoom(false)}
+                    className='zoomed-in-pic-exit'
+                >
+                    <img src={exitIcon} />
+                </div>
+                <img src={newArray[currentSlide - 1].bigPicture} />
+            </div>
+        )
+    }
+
+    const ConditionalRender = () => {
+        if (isZoom) {
+            return <ZoomedIn />
+        } else {
+            return <NormalSlider />
+        }
+    }
+
+    return (
+        <ConditionalRender />
     )
 }
