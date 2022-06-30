@@ -1,18 +1,42 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './styles/categoriesBar.scss';
 
 import { categoriesBarArray } from '../../const';
 
+import { useNavigate, useLocation } from 'react-router-dom';
+
 export const CategoriesBar = () => {
 
-    const [isActive, setActive] = useState('news');
-   
+    const navigate = useNavigate();
+
+    const { state } = useLocation();
+    
+    const [isActive, setActive] = useState('');
+
+    const capitalizeString = (string) => {
+        return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+
+    const handleRouter = (title) => {
+        navigate('/category', { state: capitalizeString(title)});
+    }
+
     const toggleActive = (e) => {
         const { title } = e.currentTarget;
 
         setActive(title);
+
+        handleRouter(capitalizeString(title));
     }
+
+    useEffect(() => {
+        if (state) {
+            setActive(state.toLowerCase());
+        } else {
+            setActive('');
+        }
+    }, [isActive]);
 
     return (
         <section className='categories-section'>

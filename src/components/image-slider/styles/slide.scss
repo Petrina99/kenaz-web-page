@@ -36,7 +36,7 @@
         left: 30px;
             
         h3 {
-            @include set-font($font-primary, normal, 34px, $font-color-primary, 41px, 700);
+            @include set-font($font-secondary, normal, 34px, $font-color-primary, 41px, 700);
         }
     }
     

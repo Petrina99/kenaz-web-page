@@ -21,7 +21,7 @@ export const CategoryGroup = ({ title, size }) => {
     let sectionStyle = size == 3 ? 'big-pics' : 'small-pics';
 
     const handleRouter = () => {
-        navigate('/category', { state: { type : title}})
+        navigate('/category', { state: title});
     }
 
     return (
