@@ -31,7 +31,7 @@ export const CategoriesBar = () => {
     }
 
     useEffect(() => {
-        if (state) {
+        if (state.title != null) {
             setActive(state.title.toLowerCase());
         } else {
             setActive('');

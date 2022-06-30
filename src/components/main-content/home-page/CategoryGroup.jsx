@@ -21,7 +21,7 @@ export const CategoryGroup = ({ title, size }) => {
     let sectionStyle = size == 3 ? 'big-pics' : 'small-pics';
 
     const handleRouter = () => {
-        navigate('/category', { state: {title: title, slide: null }});
+        navigate('/category', { state: { title: title, slide: null }});
     }
 
     return (
@@ -32,7 +32,7 @@ export const CategoryGroup = ({ title, size }) => {
             </div>
             <div className={`articles-layout ${sectionStyle}`}>
                 {newArray.map((item) => {
-                    return <CategoryItem item={item} key={item.tag} size={size} />
+                    return <CategoryItem item={item} key={item.tag} size={size} title={title} />
                 })}
             </div>
         </section>

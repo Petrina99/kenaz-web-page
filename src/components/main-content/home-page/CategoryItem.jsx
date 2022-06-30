@@ -1,17 +1,28 @@
 import './styles/categoryItem.scss';
 import thumbnailPicture from '../../../assets/category-image.svg';
 
-export const CategoryItem = ({ item, size }) => {
+import { useNavigate } from 'react-router-dom';
 
-  let itemStyle = size == 3 ? 'normal' : 'small';
+export const CategoryItem = ({ item, size, title }) => {
 
-  return (
-    <div className={`category-item-${itemStyle}`}>
-        <img src={thumbnailPicture} />
-        <div>
-          <p>{item.date}</p>
-          <h3>{item.title}</h3>
+    const navigate = useNavigate();
+
+    let itemStyle = size == 3 ? 'normal' : 'small';
+
+    const handleRouter = () => {
+        navigate('/article', { state: { title: title, slide: item }});
+    }
+    
+    return (
+        <div 
+            className={`category-item-${itemStyle}`}
+            onClick={handleRouter}
+        >
+            <img src={thumbnailPicture} />
+            <div>
+                <p>{item.date}</p>
+                <h3>{item.title}</h3>
+            </div>
         </div>
-    </div>
-  )
+    )
 }

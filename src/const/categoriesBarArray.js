@@ -8,7 +8,7 @@ export const categoriesBarArray = [
         title: 'BUSINESS'
     },
     {
-        tag: 'sport',
+        tag: 'sports',
         title: 'SPORT',
     },
     {

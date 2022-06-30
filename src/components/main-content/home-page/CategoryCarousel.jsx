@@ -4,6 +4,8 @@ import { slideArray } from '../../../const';
 
 import './styles/categoryCarousel.scss';
 
+import { CarouselItem } from './';
+
 export const CategoryCarousel = ({ title, size }) => {
     
     let styleWidth = size == 2 ? 'big' : 'small';
@@ -22,13 +24,11 @@ export const CategoryCarousel = ({ title, size }) => {
             </article>
             <Slider {...settings}>
                 {slideArray.map((slide) => (
-                    <div className={`carousel-slider-${styleWidth}`} key={slide.tag}>
-                        <div className='carousel-img'></div>
-                        <div className='carousel-text'>
-                            <p>{slide.date}</p>
-                            <h3>{slide.title}</h3>
-                        </div>
-                    </div>
+                    <CarouselItem 
+                        key={slide.tag} 
+                        slide={slide} 
+                        styleWidth={styleWidth}
+                    />
                 ))}
             </Slider>
         </div>
