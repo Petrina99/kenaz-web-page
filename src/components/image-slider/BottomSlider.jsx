@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Slider from 'react-slick';
 
@@ -16,6 +16,15 @@ export const BottomSlider = () => {
 
     const [currentSlide, setCurrentSlide] = useState(1);
     const [isZoom, setIsZoom] = useState(false);
+
+    useEffect(() => {
+
+        if (isZoom) {
+            document.body.style.overflow = "hidden"; 
+        } else {
+            document.body.style.overflow = "visible";
+        }
+    }, [isZoom]);
 
     const handleSlide = (e) => {
         const { id } = e.currentTarget.dataset;
