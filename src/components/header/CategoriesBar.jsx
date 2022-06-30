@@ -19,7 +19,7 @@ export const CategoriesBar = () => {
     }
 
     const handleRouter = (title) => {
-        navigate('/category', { state: capitalizeString(title)});
+        navigate('/category', { state: { title: capitalizeString(title), slide: null } });
     }
 
     const toggleActive = (e) => {
@@ -32,7 +32,7 @@ export const CategoriesBar = () => {
 
     useEffect(() => {
         if (state) {
-            setActive(state.toLowerCase());
+            setActive(state.title.toLowerCase());
         } else {
             setActive('');
         }

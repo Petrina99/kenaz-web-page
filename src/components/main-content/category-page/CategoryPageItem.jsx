@@ -5,12 +5,12 @@ import calanderIcon from '../../../assets/calendar.svg';
 
 import { useNavigate } from 'react-router-dom';
 
-export const CategoryPageItem = ({ slide }) => {
+export const CategoryPageItem = ({ slide, title }) => {
 
     const navigate = useNavigate();
 
     const handleRouter = () => {
-        navigate('/article', { state: { type: slide }})
+        navigate('/article', { state: { title: title, slide: slide } })
     }
 
     return (

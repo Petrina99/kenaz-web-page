@@ -12,7 +12,7 @@ export const Header = () => {
     const navigate = useNavigate();
 
     const handleRouter = () => {
-        navigate('/');
+        navigate('/', { state: { title: '', slide: null }});
     }
 
     return (

@@ -17,7 +17,7 @@ export const ArticleContent = () => {
                 </p>
             </div>
             <div className='article-content-img'>
-                <img src={state.type.picture} />
+                <img src={state.slide.picture} />
             </div>
             <div className='article-content-text'>
                 <p>

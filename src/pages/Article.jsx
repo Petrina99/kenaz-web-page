@@ -13,6 +13,7 @@ import {
 import './styles/home.scss';
 
 export const Article = () => {
+
     return (
         <>
             <Header />

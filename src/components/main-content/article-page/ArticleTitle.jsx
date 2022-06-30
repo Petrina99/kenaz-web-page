@@ -11,13 +11,13 @@ export const ArticleTitle = () => {
     return (
         <section className='article-title-container'>
             <div className='article-title-img'>
-                <img src={state.type.picture} />
+                <img src={state.slide.picture} />
             </div>
             <div className='article-title-date'>
-                <p>{state.type.date}</p>
+                <p>{state.slide.date}</p>
             </div>
             <div className='article-title-heading'>
-                <h3>{state.type.title}</h3>
+                <h3>{state.slide.title}</h3>
             </div>
         </section>
     )

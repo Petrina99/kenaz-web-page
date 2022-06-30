@@ -11,6 +11,7 @@ import {
 import './styles/home.scss';
 
 export const Category = () => {
+
     return (
         <>
             <Header />

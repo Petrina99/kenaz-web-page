@@ -13,11 +13,11 @@ export const CategoryContainer = () => {
     return (
         <div className='category-page-container'>
             <div className='category-container-heading'>
-                <h3>{state === null ? 'News' : state}</h3>
+                <h3>{state.title === null ? 'News' : state.title}</h3>
             </div>
             <section className='category-page-group'>
                 {slideArray.map((slide) => (
-                    <CategoryPageItem key={slide.tag} slide={slide} />
+                    <CategoryPageItem key={slide.tag} slide={slide} title={state.title} />
                 ))}
             </section>
             <CategoryFooter />
